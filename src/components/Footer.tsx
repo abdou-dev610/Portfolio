@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter, Mail, Code2, ArrowUpRight } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com" },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
+  { icon: Github, label: "GitHub", href: "https://github.com/abdou-2000" },
+  { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/abdoundiaye/" },
   { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
-  { icon: Mail, label: "Email", href: "mailto:alex@example.com" },
+  { icon: Mail, label: "Email", href: "mailto:ndiayeabdoumamesaye1234@gmail.com" },
 ];
 
 const navLinks = [
@@ -27,7 +27,7 @@ const Footer = () => {
                 <Code2 size={18} className="text-primary-foreground" />
               </div>
               <span className="font-display font-bold text-lg">
-                Alex<span className="text-primary">Dev</span>
+                Abdou<span className="text-primary">Dev</span>
               </span>
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed">
@@ -76,8 +76,8 @@ const Footer = () => {
               Contact
             </h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li>alex@example.com</li>
-              <li>Paris, France</li>
+              <li>ndiayeabdoumamesaye1234@gmail.com</li>
+              <li>Dakar, sénégal</li>
               <li className="pt-2">
                 <Link
                   to="/contact"
@@ -91,8 +91,8 @@ const Footer = () => {
         </div>
 
         <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-muted-foreground">
-          <p>© {new Date().getFullYear()} AlexDev. Tous droits réservés.</p>
-          <p>Conçu & développé avec ❤️</p>
+          <p>© {new Date().getFullYear()} AbdouDev. Tous droits réservés.</p>
+        
         </div>
       </div>
     </footer>

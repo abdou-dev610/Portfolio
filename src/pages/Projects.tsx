@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
-import project1Img from "@/assets/project1.jpg";
-import project2Img from "@/assets/project2.jpg";
-import project3Img from "@/assets/project3.jpg";
+import project1Img from "@/assets/project6.jpg";
+import project2Img from "@/assets/project5.jpg";
+import project3Img from "@/assets/project7.jpg";
 
 const allProjects = [
   {
@@ -14,8 +12,8 @@ const allProjects = [
     description: "Tableau de bord analytique en temps réel avec visualisations interactives, gestion des KPIs et rapports exportables.",
     image: project1Img,
     tags: ["React", "TypeScript", "Recharts", "Node.js", "PostgreSQL"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/abdou-2000",
+    liveUrl: "https://poetic-crumble-b5a5cd.netlify.app/profile",
     category: "Web App",
   },
   {
@@ -23,8 +21,8 @@ const allProjects = [
     description: "Plateforme e-commerce complète avec gestion de produits, panier, paiement Stripe et espace administrateur.",
     image: project2Img,
     tags: ["Next.js", "Stripe", "Prisma", "TailwindCSS"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
+    githubUrl: "https://github.com/abdou-2000",
+    liveUrl: "https://poetic-crumble-b5a5cd.netlify.app/",
     category: "E-Commerce",
   },
   {
@@ -32,34 +30,9 @@ const allProjects = [
     description: "Application mobile de gestion de tâches avec synchronisation cloud, notifications push et collaboration en équipe.",
     image: project3Img,
     tags: ["React Native", "Firebase", "Redux", "Expo"],
-    githubUrl: "https://github.com",
+    githubUrl: "https://github.com/abdou-2000",
+    liveUrl: "https://lucent-hummingbird-028f4f.netlify.app/",
     category: "Mobile",
-  },
-  {
-    title: "API REST Scalable",
-    description: "Architecture microservices avec authentification JWT, rate limiting, documentation Swagger et déploiement Docker.",
-    image: project1Img,
-    tags: ["Node.js", "Express", "Docker", "Redis", "Swagger"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    category: "Backend",
-  },
-  {
-    title: "Portfolio CMS",
-    description: "Système de gestion de contenu headless avec éditeur WYSIWYG, gestion des médias et API GraphQL.",
-    image: project2Img,
-    tags: ["GraphQL", "React", "MongoDB", "AWS S3"],
-    githubUrl: "https://github.com",
-    category: "Web App",
-  },
-  {
-    title: "Chat en Temps Réel",
-    description: "Application de messagerie instantanée avec rooms, partage de fichiers, emojis et historique des conversations.",
-    image: project3Img,
-    tags: ["Socket.io", "React", "Node.js", "MongoDB"],
-    githubUrl: "https://github.com",
-    liveUrl: "https://example.com",
-    category: "Web App",
   },
 ];
 
@@ -73,9 +46,7 @@ const Projects = () => {
     : allProjects.filter((p) => p.category === activeCategory);
 
   return (
-    <>
-      <Navbar />
-      <main className="min-h-screen pt-24 pb-20">
+    <main className="min-h-screen pt-24 pb-20">
         {/* Header */}
         <section className="container mx-auto px-6 mb-12">
           <motion.div
@@ -145,7 +116,7 @@ const Projects = () => {
               Retrouvez tous mes projets open source, contributions et expérimentations sur GitHub.
             </p>
             <a
-              href="https://github.com"
+              href="https://github.com/abdou-2000"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all teal-glow"
@@ -157,8 +128,6 @@ const Projects = () => {
           </motion.div>
         </section>
       </main>
-      <Footer />
-    </>
   );
 };
 

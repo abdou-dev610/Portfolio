@@ -34,7 +34,7 @@ const Navbar = () => {
             <Code2 size={18} className="text-primary-foreground" />
           </div>
           <span className="font-display font-bold text-lg text-foreground">
-            Alex<span className="text-primary">Dev</span>
+            Abdou<span className="text-primary">Dev</span>
           </span>
         </Link>
 

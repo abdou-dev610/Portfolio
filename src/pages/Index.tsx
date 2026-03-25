@@ -1,16 +1,30 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Download, Sparkles } from "lucide-react";
-import profileImg from "@/assets/profile.jpg";
+import profileImg from "@/assets/profile1.jpeg";
 
 const Home = () => {
+  const handleDownloadCV = () => {
+    // Créer un lien temporaire et simuler un clic
+    const link = document.createElement('a');
+    link.href = '/CV.pdf';
+    link.download = 'Abdoul_Khadre_Ndiaye_CV.pdf';
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    // Nettoyer
+    setTimeout(() => {
+      document.body.removeChild(link);
+    }, 100);
+  };
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         {/* Background grid */}
         <div
-          className="absolute inset-0 opacity-[0.03]"
+          className="absolute inset-0 opacity-[0.03] pointer-events-none"
           style={{
             backgroundImage:
               "linear-gradient(hsl(var(--primary)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary)) 1px, transparent 1px)",
@@ -18,8 +32,8 @@ const Home = () => {
           }}
         />
         {/* Glow orbs */}
-        <div className="absolute top-1/4 left-1/4 w-80 h-80 rounded-full bg-primary/5 blur-3xl" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-primary/3 blur-3xl" />
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-primary/3 blur-3xl pointer-events-none" />
 
         <div className="container mx-auto px-6 pt-20 pb-10">
           <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
@@ -42,7 +56,7 @@ const Home = () => {
                 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-foreground mb-4"
               >
                 Bonjour, je suis{" "}
-                <span className="text-gradient">Alexandre</span>
+                <span className="text-gradient">Abdoul Khadre Ndiaye</span>
               </motion.h1>
 
               <motion.h2
@@ -75,14 +89,15 @@ const Home = () => {
                 >
                   Voir mes projets
                   <ArrowDown size={16} />
-                </Link>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-foreground font-semibold hover:border-primary/50 hover:bg-primary/5 transition-all duration-200"
+                </Link>                
+                <button
+                  type="button"
+                  onClick={handleDownloadCV}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-border text-foreground font-semibold hover:border-primary/50 hover:bg-primary/5 transition-all duration-200 cursor-pointer text-center"
                 >
                   <Download size={16} />
                   Télécharger CV
-                </a>
+                </button>
               </motion.div>
 
               {/* Socials */}
@@ -93,8 +108,8 @@ const Home = () => {
                 className="flex gap-4 justify-center lg:justify-start mt-8"
               >
                 {[
-                  { icon: Github, href: "https://github.com", label: "GitHub" },
-                  { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+                  { icon: Github, href: "https://github.com/abdou-2000", label: "GitHub" },
+                  { icon: Linkedin, href: "https://www.linkedin.com/in/abdoundiaye/", label: "LinkedIn" },
                 ].map(({ icon: Icon, href, label }) => (
                   <a
                     key={label}
@@ -125,7 +140,7 @@ const Home = () => {
                 <div className="absolute inset-6 rounded-full overflow-hidden teal-glow">
                   <img
                     src={profileImg}
-                    alt="Alexandre - Développeur Full Stack"
+                    alt="Abdoul Khadre Ndiaye - Développeur Full Stack"
                     className="w-full h-full object-cover animate-float"
                   />
                 </div>
@@ -163,9 +178,9 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
             {[
-              { number: "5+", label: "Ans d'expérience" },
-              { number: "30+", label: "Projets réalisés" },
-              { number: "20+", label: "Clients satisfaits" },
+              { number: "1+", label: "Ans d'expérience" },
+              { number: "10+", label: "Projets réalisés" },
+              { number: "5+", label: "Clients satisfaits" },
               { number: "10+", label: "Technologies maîtrisées" },
             ].map((stat, i) => (
               <motion.div

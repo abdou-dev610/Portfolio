@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { Code2, Palette, Server, Smartphone, Database, Globe } from "lucide-react";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import profileImg from "@/assets/profile.jpg";
+import profileImg from "@/assets/profile1.jpeg";
 
 const skills = [
   { name: "React / Next.js", level: 92, category: "Frontend" },
@@ -50,9 +48,7 @@ const SkillBar = ({ name, level, index }: { name: string; level: number; index: 
 
 const About = () => {
   return (
-    <>
-      <Navbar />
-      <main className="min-h-screen pt-24 pb-20">
+    <main className="min-h-screen pt-24 pb-20">
         {/* Header */}
         <section className="container mx-auto px-6 mb-16">
           <motion.div
@@ -104,13 +100,13 @@ const About = () => {
               className="space-y-5"
             >
               <h2 className="font-display text-2xl sm:text-3xl font-bold text-foreground">
-                Bonjour ! Je suis Alexandre Martin
+                Bonjour ! Je suis Abdoul Khadre Ndiaye
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                Développeur Full Stack avec plus de 5 ans d'expérience, je me spécialise dans la création d'applications web robustes et performantes. Mon expertise couvre aussi bien le développement frontend avec React que le backend avec Node.js et Python.
+                Développeur Full Stack avec plus d'un an d'expérience, je me spécialise dans la création d'applications web robustes et performantes. Mon expertise couvre aussi bien le développement frontend avec React que le backend avec Node.js et Python.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Basé à Paris, je travaille avec des startups et des entreprises pour transformer leurs idées en produits numériques innovants. J'accorde une grande importance à la qualité du code, aux bonnes pratiques et à l'expérience utilisateur.
+                Basé à Dakar, je travaille avec des startups et des entreprises pour transformer leurs idées en produits numériques innovants. J'accorde une grande importance à la qualité du code, aux bonnes pratiques et à l'expérience utilisateur.
               </p>
               <p className="text-muted-foreground leading-relaxed">
                 En dehors du code, je m'intéresse à l'open source, à l'IA et au design. Toujours avide d'apprendre, je contribue régulièrement à des projets communautaires.
@@ -118,10 +114,10 @@ const About = () => {
 
               <div className="grid grid-cols-2 gap-4 pt-2">
                 {[
-                  { label: "Localisation", value: "Paris, France" },
+                  { label: "Localisation", value: "Dakar, Sénégal" },
                   { label: "Disponibilité", value: "Freelance / CDI" },
-                  { label: "Email", value: "alex@example.com" },
-                  { label: "Langues", value: "FR, EN, ES" },
+                  { label: "Email", value: "ndiayeabdoumamesaye1234@gmail.com" },
+                  { label: "Langues", value: "FR, EN" },
                 ].map((item) => (
                   <div key={item.label}>
                     <span className="text-xs text-muted-foreground uppercase tracking-wider">{item.label}</span>
@@ -184,8 +180,6 @@ const About = () => {
           </div>
         </section>
       </main>
-      <Footer />
-    </>
   );
 };
 
