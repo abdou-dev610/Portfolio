@@ -1,10 +1,6 @@
 import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send, Github, Linkedin, Twitter, CheckCircle2 } from "lucide-react";
-import emailjs from "@emailjs/browser";
-
-// Initialize EmailJS
-emailjs.init("VeueGRe1Yf2PnYZTN"); // EmailJS Public Key
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "ndiayeabdoumamesaye1234@gmail.com", href: "mailto:ndiayeabdoumamesaye1234@gmail.com" },
@@ -23,10 +19,10 @@ const Contact = () => {
   const [formState, setFormState] = useState({ name: "", email: "", subject: "", message: "", phone: "" });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState({});
 
   const validate = () => {
-    const newErrors: Record<string, string> = {};
+    const newErrors = {};
     if (!formState.name.trim()) newErrors.name = "Le nom est requis";
     if (!formState.email.trim()) newErrors.email = "L'email est requis";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formState.email)) newErrors.email = "Email invalide";
@@ -35,13 +31,13 @@ const Contact = () => {
     return newErrors;
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormState((prev) => ({ ...prev, [name]: value }));
     if (errors[name]) setErrors((prev) => ({ ...prev, [name]: "" }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
@@ -51,23 +47,22 @@ const Contact = () => {
 
     setLoading(true);
     try {
-      // Create template parameters object
-      const templateParams = {
-        to_email: "ndiayeabdoumamesaye1234@gmail.com",
-        from_email: formState.email,
-        name: formState.name,
-        email: formState.email,
-        subject: formState.subject,
-        message: formState.message,
-        phone: formState.phone || "Non fourni",
-      };
+      // Format message for WhatsApp
+      const message = `
+*📝 Nouveau Message de Contact*
 
-      await emailjs.send(
-        "service_8zvhek3", // Service ID
-        "template_grn5hpf", // EmailJS Template ID
-        templateParams,
-        "VeueGRe1Yf2PnYZTN" // EmailJS Public Key
-      );
+*Nom:* ${formState.name}
+*Email:* ${formState.email}
+*Téléphone:* ${formState.phone || "Non fourni"}
+*Sujet:* ${formState.subject || "Non spécifié"}
+
+*Message:*
+${formState.message}
+      `.trim();
+
+      // Send via WhatsApp
+      const whatsappUrl = `https://wa.me/221762048119?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, "_blank");
 
       setLoading(false);
       setSubmitted(true);
