@@ -108,7 +108,7 @@ const Home = () => {
                 className="flex gap-4 justify-center lg:justify-start mt-8"
               >
                 {[
-                  { icon: Github, href: "https://github.com/abdou-2000", label: "GitHub" },
+                  { icon: Github, href: "https://github.com/abdou-dev610", label: "GitHub" },
                   { icon: Linkedin, href: "https://www.linkedin.com/in/abdoundiaye/", label: "LinkedIn" },
                 ].map(({ icon: Icon, href, label }) => (
                   <a

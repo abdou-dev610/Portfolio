@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Github, Linkedin, Twitter, Mail, Code2, ArrowUpRight } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com/abdou-2000" },
+  { icon: Github, label: "GitHub", href: "https://github.com/abdou-dev610" },
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/abdoundiaye/" },
   { icon: Twitter, label: "Twitter", href: "https://twitter.com" },
   { icon: Mail, label: "Email", href: "mailto:ndiayeabdoumamesaye1234@gmail.com" },

@@ -9,7 +9,7 @@ const contactInfo = [
 ];
 
 const socialLinks = [
-  { icon: Github, label: "GitHub", href: "https://github.com/abdou-2000" },
+  { icon: Github, label: "GitHub", href: "https://github.com/abdou-dev610" },
   { icon: Linkedin, label: "LinkedIn", href: "https://www.linkedin.com/in/abdoundiaye/" },
   { icon: Twitter, label: "Twitter", href: "https://x.com/AbdouNdiay95016" },
 ];

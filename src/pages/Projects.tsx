@@ -12,8 +12,6 @@ const allProjects = [
     description: "Tableau de bord analytique en temps réel avec visualisations interactives, gestion des KPIs et rapports exportables.",
     image: project1Img,
     tags: ["React", "TypeScript", "Recharts", "Node.js", "PostgreSQL"],
-    githubUrl: "https://github.com/abdou-2000",
-    liveUrl: "https://poetic-crumble-b5a5cd.netlify.app/profile",
     category: "Web App",
   },
   {
@@ -21,8 +19,8 @@ const allProjects = [
     description: "Plateforme e-commerce complète avec gestion de produits, panier, paiement Stripe et espace administrateur.",
     image: project2Img,
     tags: ["Next.js", "Stripe", "Prisma", "TailwindCSS"],
-    githubUrl: "https://github.com/abdou-2000",
-    liveUrl: "https://poetic-crumble-b5a5cd.netlify.app/",
+    githubUrl: "https://github.com/abdou-dev610",
+    liveUrl: "https://frontend-e-commerce1-hbdp.vercel.app/",
     category: "E-Commerce",
   },
   {
@@ -30,9 +28,9 @@ const allProjects = [
     description: "Application mobile de gestion de tâches avec synchronisation cloud, notifications push et collaboration en équipe.",
     image: project3Img,
     tags: ["React Native", "Firebase", "Redux", "Expo"],
-    githubUrl: "https://github.com/abdou-2000",
+    githubUrl: "https://github.com/abdou-dev610",
     liveUrl: "https://lucent-hummingbird-028f4f.netlify.app/",
-    category: "Mobile",
+    category: "Mobile", 
   },
 ];
 
@@ -116,7 +114,7 @@ const Projects = () => {
               Retrouvez tous mes projets open source, contributions et expérimentations sur GitHub.
             </p>
             <a
-              href="https://github.com/abdou-2000"
+              href="https://github.com/abdou-dev610"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-all teal-glow"
